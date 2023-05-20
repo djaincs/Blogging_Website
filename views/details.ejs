@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="card content detail">
+        <div class="card-body">
+            <h1><%= blog.title %></h2>
+            <h2>By-<%= blog.author%></h2>
+            <div class="content">
+              <p><%= blog.body %></p>
+            </div>
+            <a class="delete" data-doc="<%= blog._id %>">
+              <img src="../trashcan.svg" alt="delete icon">
+            </a>
+            <a class="heart-icon" data-doc="<%= blog._id %>">
+              <i class="fa fa-heart" style="color:red;font-size: 20px;"></i>
+            </a>
+            
+
+        </div>
+      </div>
+
+   
+
+    <script>
+        const trashcan = document.querySelector('a.delete');
+    
+        trashcan.addEventListener('click', (e) => {
+          const endpoint = `/blogs/${trashcan.dataset.doc}`;
+    
+          fetch(endpoint, {
+            method: 'DELETE',
+          })
+          .then(response => response.json())
+          .then(data => window.location.href = data.redirect)
+          .catch(err => console.log(err));
+        });
+
+        // const likeicon = document.querySelectorAll('a.heart-icon');
+        // var heartCounts = document.querySelectorAll('.heart-count') ;
+
+        // likeicon.forEach(function(likeicon,index){
+        //   var count = 0;
+        //   var clicked = false;
+
+        //   likeicon.addEventListener('click',function(){
+        //     const endpoint = `/blogs/${likeicon.dataset.doc}`;
+
+        //   fetch(endpoint, {
+        //     method: 'PUT',
+        //   })
+        //   .then(response => response.json())
+        //   .catch(err => console.log(err));
+
+        //     if(!clicked){
+        //       count++;
+        //       heartCounts[index].innerText = count;
+        //       likeicon.classList.toggle("fas");
+        //       clicked = true;
+        //     }
+        //   });
+        // });
+
+        
+        
+      </script>
+
+</body>
+</html>

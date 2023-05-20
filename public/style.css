@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',Arial;
+    letter-spacing: 1px;
+
+}
+body{
+    width:100%;
+    
+}
+
+
+/* Nav CSS */
+nav{
+    height: 70px;
+    align-items: center;
+    border-bottom: 0px #f2f6fa;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f2f6fa;
+    padding-bottom: 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+}
+nav .nav-link{
+    font-size: 20px;
+    color: #31313b;
+    font-weight: 300;
+    transition: 0.4s;
+}
+nav .nav-link:hover{
+    color: #7d7da0;
+}
+
+/* content */
+.content{
+    padding-left: 30px ;
+    padding-right: 30px;
+}
+
+/* Index CSS */
+.blogs{
+    margin-bottom: 90px;
+}
+.blogs .sub-title{
+    font-size: 40px;
+    margin-top: 90px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.blogs .single{
+    text-decoration: none;
+}
+.blogs a{
+    display: block;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 6px solid #00A78E;
+    color: #383434;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.blogs h2{
+    font-size: 25px;
+}
+.blogs h4,
+.blogs p{
+    font-size: 15px;
+}
+.blogs a:hover h2{
+    color: #00A78E;
+}
+
+/* Details CSS */
+.card{
+    margin: 90px 20px 0 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.19);
+    padding: 0px;
+}
+.card-body{
+    padding: 4px;
+}
+.detail{
+    position: relative;
+    text-align: center;
+}
+.detail .delete{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    border-radius: 50%;
+    padding: 8px;
+}
+.detail .delete:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+   
+}
+.detail h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0 30px 0;
+    line-height: 24px;
+    letter-spacing: 1px;  
+}
+
+.detail h2,
+.detail p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* About CSS */
+.aboutus{
+    margin: 120px 80px 90px 70px;
+}
+.about{
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+/* Create CSS */
+.create-blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-blog form{
+   
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+    /* margin-left: 30%; */
+}
+.form-label{
+    font-weight: 200;
+    padding-left: 5px;
+    margin-top: 4px;
+}
+.create-blog input,
+.create-blog textarea{
+    display: block;
+    width: 100%;
+    margin: 3px;
+    padding: 6px;
+}
+.create-blog .btn2{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #dfe4e9;
+    width: 100%;
+    bottom: 0;
+    height:60px;  
+    padding: 19px;
+    position: fixed; 
+}
